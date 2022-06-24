@@ -1,0 +1,1 @@
+export { classroomRouter } from "./classroom.route";

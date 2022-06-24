@@ -1,0 +1,26 @@
+{
+  "development": {
+    "database": "simple_development",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "define": {
+      "freezeTableName": true
+    }
+  },
+  "test": {
+    "database": "simple_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "define": {
+      "freezeTableName": true
+    }
+  },
+  "production": {
+    "database": "simple_production",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "define": {
+      "freezeTableName": true
+    }
+  }
+}
