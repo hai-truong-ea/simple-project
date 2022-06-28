@@ -5,7 +5,7 @@ import "boot/cron";
 import database from "database/models";
 
 const app: Express = express();
-database.sequelize.sync({ alter: true });
+database.sequelize.sync();
 
 app.use(express.json());
 app.use("/", routers);

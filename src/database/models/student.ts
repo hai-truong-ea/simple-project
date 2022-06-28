@@ -4,6 +4,8 @@ import DataType from "sequelize/types/data-types";
 export class Student extends Model {
   declare id: number;
   declare username: string;
+  declare name: string;
+  declare age: number;
   declare password: string;
   declare className: string;
   declare classRoomID: number;
@@ -33,6 +35,14 @@ export default (sequelize: Sequelize, DataTypes: typeof DataType) => {
         primaryKey: true,
         type: DataTypes.INTEGER,
       },
+      name: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+      },
+      age: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+      },
       username: {
         allowNull: false,
         type: DataTypes.STRING,
@@ -46,9 +56,13 @@ export default (sequelize: Sequelize, DataTypes: typeof DataType) => {
         allowNull: false,
         type: DataTypes.STRING,
       },
+      classRoomID: {
+        allowNull: false,
+        type: DataTypes.INTEGER,
+      },
       info: {
         type: DataTypes.TEXT,
-      }
+      },
     },
     {
       sequelize,
